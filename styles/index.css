@@ -116,6 +116,7 @@ padding-top: 0px;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
 }
 #work-item-images > *{
     scroll-snap-align: center;
