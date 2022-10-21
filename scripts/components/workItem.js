@@ -11,19 +11,19 @@ const itemWrapper = document.createElement('div');
 itemWrapper.id = 'work-item-title';
 div.append(itemWrapper)
 
-const arrowBack = document.createElement('img');
-arrowBack.src = "../../sources/arrow-back.png";
-arrowBack.addEventListener('click', () => {
+const goBack = document.createElement('li');
+goBack.innerHTML = titleText
+itemWrapper.append(goBack);
+goBack.addEventListener('click', () => {
     div.remove()
     ul.classList.remove('hide')
 
 })
-arrowBack.classList.add('arrow-back')
-itemWrapper.append(arrowBack);
 
-const text = document.createElement('li');
-text.innerHTML = titleText
-itemWrapper.append(text);
+
+
+
+
 
 const imageWrapper = document.createElement('div');
 imageWrapper.id = 'work-item-images'
@@ -33,7 +33,7 @@ const src = content[contentIdTag].src;
 console.log(images)
 
 const workDescription = document.createElement('div');
-workDescription.innerHTML = "<h2 style='padding-right:20px;'> This is the work description <h2/> <p> this is a description<p/>"
+workDescription.innerHTML = "<h2 style='padding-right:20px; width: 80vw;'> sneaker shop <h2/>"
 imageWrapper.append(workDescription)
 
 images.map((i)=> {
@@ -42,5 +42,6 @@ images.map((i)=> {
     console.log(image.src)
     imageWrapper.append(image)
 })
+
 }
 export default workItem

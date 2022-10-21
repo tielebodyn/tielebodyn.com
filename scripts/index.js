@@ -31,7 +31,7 @@ itemArray.forEach(e => {
         ul.classList.add("hide");
         workItem({
             parent: section2,
-            titleText: e.innerHTML,
+            titleText: "go back",
             contentIdTag: `${e.id}`,
             eventProps: ul
         });

@@ -19,7 +19,7 @@ body {
 
 }
 .scroll-area{
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 * {
     padding: 0px;
@@ -115,10 +115,15 @@ padding-top: 0px;
 #work-item-images {
     display: flex;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+#work-item-images > *{
+    scroll-snap-align: center;
 }
 
+
 ::-webkit-scrollbar {
-    height: 5px;
+    height: 1px;
     width: 0px;
 
 }
@@ -131,7 +136,7 @@ padding-top: 0px;
 }
 
 #work-item-images img {
-    height: 500px;
+    width: 90vw;
     margin: 1px;
 
 }
