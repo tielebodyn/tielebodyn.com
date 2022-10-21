@@ -1,0 +1,74 @@
+
+@font-face {
+  font-family: round-medium;
+
+  src: url("../sources/fonts/Round_WEBL-Medium.woff") format("opentype");
+}
+@font-face {
+  font-family: round-book;
+
+  src: url("../sources/fonts/Round_WEBL-Book.woff") format("opentype");
+}
+@font-face {
+  font-family: round-extrabold;
+
+  src: url("../sources/fonts/Round_WEBL-Extrabold.woff") format("opentype");
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.hide {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+.transparent{
+  color: transparent;
+}
+h1, p{
+    color: white;
+    font-family: round-medium;
+  }
+  a{
+    text-decoration: none;
+    color: unset;
+  }
+  h1{
+    font-size: 40px;
+
+  }
+  h2{
+    font-family: round-book;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+    
+
+  }
+  h3{
+    font-family: helvetica;
+    font-size: 23px;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+  button{
+    padding: 5px 50px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-family: josefin sans;
+    color: white;
+    font-size: 20pt;
+    font-weight: 400;
+  }
+  button:hover{
+    background-color: white;
+    color: black;
+  }
+.arrow-down{
+  width: 50px;
+}
