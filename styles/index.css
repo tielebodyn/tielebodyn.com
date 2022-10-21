@@ -84,7 +84,7 @@ body {
     padding-top: 30px;
 }
 .section2-main{
-    padding-top: 80px;
+    padding-top: 0px;
 }
 .section2 ul {
     flex-direction: column;
@@ -118,11 +118,12 @@ padding-top: 0px;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
   
 }
 #work-item-images > *{
     scroll-snap-align: center;
-    padding-bottom: 110px;
+
 }
 
 
