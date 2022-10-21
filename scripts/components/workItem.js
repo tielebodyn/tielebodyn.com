@@ -1,13 +1,15 @@
-const workItem = ({ parent, titleText, images = {}, eventProps}) => {
-const div = document.createElement('div');
+import content from "./content.js";
+const workItem = ({ parent, titleText, contentIdTag}) => {
 const ul = document.getElementById('ul');
-div.id = 'work-item'
+
+
+const div = document.createElement('div');
+div.id = 'work-item';
 parent.append(div);
 
 const itemWrapper = document.createElement('div');
 itemWrapper.id = 'work-item-title';
 div.append(itemWrapper)
-
 
 const arrowBack = document.createElement('img');
 arrowBack.src = "../../sources/arrow-back.png";
@@ -26,12 +28,19 @@ itemWrapper.append(text);
 const imageWrapper = document.createElement('div');
 imageWrapper.id = 'work-item-images'
 div.append(imageWrapper)
-Object.entries(images).forEach(([key, value]) => {
+let  { images } = content[contentIdTag];
+const src = content[contentIdTag].src;
+console.log(images)
+
+const workDescription = document.createElement('div');
+workDescription.innerHTML = "<h2 style='padding-right:20px;'> This is the work description <h2/> <p> this is a description<p/>"
+imageWrapper.append(workDescription)
+
+images.map((i)=> {
     const image = document.createElement('img');
-    image.src = value;
-    imageWrapper.append(image);
-});
-
+    image.src = `${src}${i}`
+    console.log(image.src)
+    imageWrapper.append(image)
+})
 }
-
 export default workItem
