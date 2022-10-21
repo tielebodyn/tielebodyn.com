@@ -12,6 +12,7 @@ body {
 }
 .wrapper{
     scroll-snap-type: y mandatory;
+
     height: 100vh;
     overflow: auto;
 
@@ -34,6 +35,7 @@ body {
 *
 **/
 .section1 {
+
     height: 100vh;
     /* background-color: rgba(0, 0, 0, 0.5); */
     background-color: black;
@@ -79,12 +81,12 @@ body {
     align-self: flex-start;
     padding-top: 30px;
 }
-
+.section2-main{
+    padding-top: 120px;
+}
 .section2 ul {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-    padding-top: 120px;
+
 }
 
 .section2 li {
@@ -98,13 +100,16 @@ body {
 
 
 #work-item {
-    height: 100%;
-}
+margin-right: 20px;
 
+}
+.arrow-back{
+    padding-right: 10px;
+    width: 20px;
+}
 #work-item-images {
     display: flex;
     overflow-x: scroll;
-    width: 90vw;
 }
 
 ::-webkit-scrollbar {

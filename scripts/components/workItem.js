@@ -1,5 +1,6 @@
-const workItem = ({ parent, titleText, images = {}}) => {
+const workItem = ({ parent, titleText, images = {}, eventProps}) => {
 const div = document.createElement('div');
+const ul = document.getElementById('ul');
 div.id = 'work-item'
 parent.append(div);
 
@@ -10,9 +11,15 @@ div.append(itemWrapper)
 
 const arrowBack = document.createElement('img');
 arrowBack.src = "../../sources/arrow-back.png";
+arrowBack.addEventListener('click', () => {
+    div.remove()
+    ul.classList.remove('hide')
+
+})
+arrowBack.classList.add('arrow-back')
 itemWrapper.append(arrowBack);
 
-const text = document.createElement('h3');
+const text = document.createElement('li');
 text.innerHTML = titleText
 itemWrapper.append(text);
 

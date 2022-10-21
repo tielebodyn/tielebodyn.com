@@ -26,16 +26,15 @@ for(let i = 1; i <= arrayLength; i++){
     const item = document.getElementById(`list-item-${i}`)
     itemArray.push(item);
 }
-
 itemArray.forEach(e => {
     e.addEventListener('click', () => {
         ul.classList.remove("flex");
         ul.classList.add("hide");
-        itemArray.forEach(e => e.classList.add('hide'))
         workItem({
             parent: section2,
             titleText: e.innerHTML,
-            images: {1: '../../sources/ez.png', 2: '../../sources/img.png',  3: '../../sources/img.png'}
+            images: {1: '../../sources/ez.png', 2: '../../sources/img.png',  3: '../../sources/img.png'},
+            eventProps: ul
         });
     })
 });
