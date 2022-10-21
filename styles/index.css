@@ -59,7 +59,9 @@ body {
 .section1-footer {
     margin-bottom: 200px;
 }
-
+.links{
+    padding-top: 160px;
+}
 /**
 *
 *   Section 2 | work
@@ -82,7 +84,7 @@ body {
     padding-top: 30px;
 }
 .section2-main{
-    padding-top: 120px;
+    padding-top: 80px;
 }
 .section2 ul {
     flex-direction: column;
@@ -116,10 +118,11 @@ padding-top: 0px;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding-bottom: 20px;
+  
 }
 #work-item-images > *{
     scroll-snap-align: center;
+    padding-bottom: 110px;
 }
 
 
