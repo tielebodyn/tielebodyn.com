@@ -8,8 +8,18 @@ body {
     background-position: center;
 
     /* background-attachment: fixed; */
+  
 }
+.wrapper{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: auto;
 
+
+}
+.scroll-area{
+    scroll-snap-align: start;
+}
 * {
     padding: 0px;
     margin: 0px;
@@ -32,8 +42,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.section1{
     padding-left: 20px;
     padding-top: 40px;
 }
