@@ -11,7 +11,7 @@ const ul = document.getElementById(`ul`)
     
 // }
 const links = document.getElementsByClassName('links');
-console.log(links)
+
 for(let i = 0; i < links.length; i++){
     links[i].addEventListener('mouseover', () =>{
         links[i].classList.remove('transparent')
@@ -25,7 +25,7 @@ for(let i = 1; i <= arrayLength; i++){
     itemArray.push(item);
 }
 itemArray.forEach(e => {
-    console.log(e.id)
+
     e.addEventListener('click', () => {
         ul.classList.remove("flex");
         ul.classList.add("hide");

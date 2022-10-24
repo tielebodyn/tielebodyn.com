@@ -30,12 +30,16 @@
   color: transparent;
 }
 h1, p{
-    color: white;
+
     font-family: round-medium;
   }
   a{
     text-decoration: none;
     color: unset;
+  }
+  li{
+    font-family: round-medium;
+    font-size: 10px;
   }
   h1{
     font-size: 40px;

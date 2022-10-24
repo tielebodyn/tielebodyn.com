@@ -28,18 +28,19 @@ goBack.addEventListener('click', () => {
 const imageWrapper = document.createElement('div');
 imageWrapper.id = 'work-item-images'
 div.append(imageWrapper)
-let  { images } = content[contentIdTag];
+let  { images, html } = content[contentIdTag];
 const src = content[contentIdTag].src;
-console.log(images)
+
 
 const workDescription = document.createElement('div');
-workDescription.innerHTML = "<h2 style='padding-right:20px; width: 80vw;'> sneaker shop <h2/>"
+workDescription.classList.add('work-item')
+workDescription.innerHTML = html;
 imageWrapper.append(workDescription)
 
 images.map((i)=> {
     const image = document.createElement('img');
     image.src = `${src}${i}`
-    console.log(image.src)
+
     imageWrapper.append(image)
 })
 
