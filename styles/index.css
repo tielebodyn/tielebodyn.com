@@ -155,7 +155,9 @@ padding-bottom: 20px;
 #work-item-title img {
     width: 30px;
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 /**
 *
 *   Section 3 | info
