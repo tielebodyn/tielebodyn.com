@@ -4,12 +4,10 @@ const arrayLength = 6
 const itemArray = []
 const section2 = document.getElementById(`section2-main`)
 const ul = document.getElementById(`ul`)
-//zoomOnScroll()
+// zoomOnScroll()
 
 
-// if(window.location.hash){
-    
-// }
+
 const links = document.getElementsByClassName('links');
 
 for(let i = 0; i < links.length; i++){
@@ -25,7 +23,7 @@ for(let i = 1; i <= arrayLength; i++){
     itemArray.push(item);
 }
 itemArray.forEach(e => {
-
+if(e){
     e.addEventListener('click', () => {
         ul.classList.remove("flex");
         ul.classList.add("hide");
@@ -33,9 +31,11 @@ itemArray.forEach(e => {
             parent: section2,
             titleText: "go back",
             contentIdTag: `${e.id}`,
-            eventProps: ul
+            eventProps: ul,
         });
     })
+}
+  
 });
 
 

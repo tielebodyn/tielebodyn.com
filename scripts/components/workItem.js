@@ -28,21 +28,23 @@ goBack.addEventListener('click', () => {
 const imageWrapper = document.createElement('div');
 imageWrapper.id = 'work-item-images'
 div.append(imageWrapper)
-let  { images, html } = content[contentIdTag];
+let  { media, html, format } = content[contentIdTag];
 const src = content[contentIdTag].src;
+if(format == 'image'){
+    media.map((i)=> {
+        const image = document.createElement('img');
+        image.src = `${src}${i}`
+        imageWrapper.append(image)
 
+    })
+}else if(format == 'video'){
+    const video = document.createElement('video');
+    video.src = `${src + media[0]}`
+    video.autoplay = true;
+    video.type= 'video/mp4'
+    imageWrapper.append(video)
+}
 
-const workDescription = document.createElement('div');
-workDescription.classList.add('work-item')
-workDescription.innerHTML = html;
-imageWrapper.append(workDescription)
-
-images.map((i)=> {
-    const image = document.createElement('img');
-    image.src = `${src}${i}`
-
-    imageWrapper.append(image)
-})
 
 }
 export default workItem
