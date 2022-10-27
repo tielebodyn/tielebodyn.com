@@ -8,7 +8,7 @@ listItem1: {
 listItem2: {
     html: `<h1>cowboy website design<h1/> <p> built with adobe xd<p/>`,
     src: `/sources/images/work/2-cowboy-design`,
-    media: ["/cowboy-design-1.png", "/cowboy-design-2.png", "/cowboy-design-3.png"],
+    media: ["/cowboy-design-1.jpg", "/cowboy-design-2.jpg", "/cowboy-design-3.jpg"],
     format: 'image',
 },
 listItem3: {
