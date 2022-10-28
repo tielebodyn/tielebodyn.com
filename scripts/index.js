@@ -3,9 +3,10 @@ import zoomOnScroll from "./zoomOnScroll.js";
 const arrayLength = 6
 const itemArray = []
 const section2 = document.getElementById(`section2-main`)
+const section1 = document.getElementsByClassName(`section1`)
 const ul = document.getElementById(`ul`)
 // zoomOnScroll()
-
+section1[0].style.mixBlendMode = 'multiply';
 
 
 const links = document.getElementsByClassName('links');
