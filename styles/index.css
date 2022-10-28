@@ -2,16 +2,9 @@
 @import 'base.css';
 
 body {
-
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
     background-color: black;
 }
 .wrapper{
-
-    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #A9C9FF;
@@ -22,11 +15,11 @@ body {
 
     scroll-snap-type: y mandatory;
     height: 100vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .scroll-area{
     scroll-snap-align: center;
-
 }
 * {
     padding: 0px;
@@ -94,10 +87,6 @@ body {
 .section2 h2 {
     align-self: flex-start;
 }
-.section2-main{
-
-
-}
 .section2 ul {
     flex-direction: column;
 }
@@ -124,7 +113,8 @@ body {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    justify-content: center;
+    justify-content: left;
+    width: inherit;
 
 
 }
@@ -134,7 +124,7 @@ body {
 }
 #work-item-images > *{
     scroll-snap-align: center;
-
+    padding-top: 20px;
 
 }
 .work-item p{
@@ -147,12 +137,22 @@ padding-bottom: 20px;
 
 }
 
+#work-description{
+    max-width: 600px;
+}
+#work-description a:hover{
+    color: lightgray;
+}
 
+#work-item-images img{
 
-#work-item-images img, video{
-    margin: 0px 3px;
     height: 450px;
 }
+#work-item-images  video{
+    max-height: 450px;
+    max-width: 80vw;
+}
+
 
 #work-item-title {
     display: flex;
@@ -199,7 +199,7 @@ padding-bottom: 20px;
 
 .section3-info {
     padding-right: 100px;
-    padding-top: 150px;
+    padding-top: 70px;
     width: 300px;
 
 }
@@ -226,4 +226,31 @@ padding-bottom: 20px;
     justify-content: space-between;
     align-items: flex-start;
     padding-left: 20px;
+}
+
+
+.section4{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    /* mix-blend-mode: multiply; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    mix-blend-mode: multiply;
+}
+
+.section4-list{
+padding-top: 70px;
+}
+video::-webkit-media-controls-panel{
+    width: 20px;
+}
+.section4-list li{
+list-style-type: none;
+font-family: round-book;
+font-size: 20px;
+padding-bottom: 20px;
+width: fit-content;
 }

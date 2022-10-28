@@ -1,7 +1,7 @@
 import content from "./content.js";
 const workItem = ({ parent, titleText, contentIdTag}) => {
 const ul = document.getElementById('ul');
-
+let  { media, html, format } = content[contentIdTag];
 
 const div = document.createElement('div');
 div.id = 'work-item';
@@ -27,8 +27,16 @@ goBack.addEventListener('click', () => {
 
 const imageWrapper = document.createElement('div');
 imageWrapper.id = 'work-item-images'
+
+const text = document.createElement('p');
+text.id = "work-description";
+text.innerHTML = html;
+div.append(text)
+
+
 div.append(imageWrapper)
-let  { media, html, format } = content[contentIdTag];
+
+
 const src = content[contentIdTag].src;
 if(format == 'image'){
     media.map((i)=> {
@@ -40,7 +48,7 @@ if(format == 'image'){
 }else if(format == 'video'){
     const video = document.createElement('video');
     video.src = `${src + media[0]}`
-    video.autoplay = true;
+    video.controls = true;
     video.type= 'video/mp4'
     imageWrapper.append(video)
 }
